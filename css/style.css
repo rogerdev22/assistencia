@@ -1,0 +1,580 @@
+/*Link externo para fonte Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Changa:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+/*Link externo para fonte*/
+
+body {
+    margin: 0px;
+    /*background: linear-gradient(125.42deg,
+                         #99A6C3 1.56%,
+                         rgba(111, 145, 179, 0.92) 17.71%,
+                         rgba(88, 108, 161, 0.89) 33.33%,
+                         rgba(19, 49, 108, 0.79) 48.44%,
+                         #2D3652 66.67%,
+                         rgba(6, 9, 19, 0.91) 84.9%,
+                         #060812 100%);*/
+        
+    /*background-color: #16161f;*/
+    background-color: rgba(228, 220, 220, 0.712);
+    color: rgb(107, 107, 109);
+}
+
+h3 {
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    color: rgb(40, 0, 56);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Estilização das linhas de divisão do site*/
+.linhas{
+	width: 100%;
+	height: 1px;
+		
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1727fa+0,ffbf00+100 */
+	background: #1727fa; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #1727fa 0%, #2866ec 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  #1727fa 0%,#2866ec 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  #1727fa 0%,#2866ec 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1727fa', endColorstr='#2866ec',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+}
+/*Estilização das linhas de divisão do site*/
+
+/*Estilizando barra de rolagem*/
+	/*Para Chrome, Safari, Opera 15+*/
+	/* Personalização da barra em geral. Definição de largura para a barra vertical */
+    ::-webkit-scrollbar{
+        /*background:#610725;*/
+        width:3px;
+    }
+    
+        /* Personalização do fundo da barra*/
+    ::-webkit-scrollbar-track {
+        /*background:#541307;*/
+        background: coral;       
+    }
+     
+        /* Personaização da alça da barra. Demonstra a altura que você está na página*/
+    ::-webkit-scrollbar-thumb {
+        /*background: #ED145b;*/
+        background: #1727fa;
+        -webkit-border-radius:10px;
+        border-radius: 5px;
+    }
+    
+/*Estilizando barra de rolagem*/
+
+
+/*Inicio Estilização de Banner Topo*/
+.topo {
+    background-color: rgb(0, 22, 15);
+    display: flex;
+    height: 105px;
+}
+
+.logo{
+    background-image: url('../imagens/logo.png');
+    background-position: left;
+    margin-left: 7px;
+    background-size: 340px 70px;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+
+#menu-direito {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+#menu-direito-info {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-direito-info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-size: 20px;
+    color: tomato;
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#menu-direito-info a:hover{
+    background-color: rgb(61, 61, 230);
+    color: white;
+    transition: 0.3s;
+}
+
+/*Fim Estilização de Banner Topo*/
+
+/*Inicio Estilização de Banner Imagem Panorâmica*/
+.imagem {
+    height: 230px;
+    flex: 1;
+}
+/*Fim Estilização de Banner Imagem Panorâmica*/
+
+
+/*Carousel*/
+.carousel {
+    max-width: 100%;
+    position: relative;
+    overflow-x: auto;
+}
+
+.carouselInner{
+    font-size: 0;
+    white-space: nowrap;
+    transition: transform 1s ease;
+}
+
+.carouselItem {
+    font-size: 1em;
+    display: inline-block;
+    width: 100%;
+}
+
+.carouselItem img {
+    display: block;
+    width: 100%;
+    height: 640px;
+}
+
+.carouselBtn {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    background: rgb(0,0,0, .5);
+    color: white;
+    display: none;
+}
+
+.carouselBtnPrev{
+    left: 0;
+}
+
+.carouselBtnNext{
+    right: 0;
+}
+
+.carouselPagination{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.carouselPagination li{
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    display: inline-block;
+}
+
+.carouselPagination li:after{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: purple;
+    border-radius: 50%;
+    opacity: .8;
+    box-shadow:  0 0 2px black;
+}
+
+.carouselPagination li.atual:after{
+    opacity: 1;
+    background-color: gold;
+}
+
+.slideinfo {
+    display: flex;
+    flex: 1;
+    height: 80px;
+    background-image: url('../imagens/slideshow_bg.png');
+    background-size: auto 105px;
+    flex-direction: column;
+}
+
+.slideinfo_titulo {
+    display: flex;
+    flex: 1;
+    font-family: 'Changa', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    color: coral;
+    /* padding-top: 10px; */
+    padding-left: 35px;
+}
+
+.slideinfo_subtitulo {
+    display: flex;
+    flex: 1;
+    font-family: 'Changa', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    padding-left: 35px;
+}
+
+/*Inicio Estilização de Banner Marcas*/
+.banner {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 350px;
+}
+
+.banner1 {
+    padding-top: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    /*background-color: rgba(228, 220, 220, 0.712);*/
+}
+
+.categorias {
+    font-size: 25px;
+    font-family: 'Changa', Arial, Helvetica, sans-serif;
+}
+
+#categorias-desktops, #categorias-smartphones, #categorias-notebooks {
+    display: flex;
+    flex: 1;
+    background-color: rgba(45, 18, 63, 0.671);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 23px;
+    margin-right: 23px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.89);
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.2s;
+}
+
+#categorias-desktops:hover {
+    background-color: rgba(45, 18, 63);
+    color: rgb(255, 145, 0);
+    font-weight: bolder;
+    font-size: 23px;
+    transform: translateX(10px);
+}    
+
+#categorias-smartphones:hover {
+    background-color: rgba(45, 18, 63);
+    color: rgb(255, 145, 0);
+    font-weight: bolder;
+    font-size: 23px;
+    transform: translateX(10px);
+} 
+
+#categorias-notebooks:hover {
+    background-color: rgba(45, 18, 63);
+    color: rgb(255, 145, 0);
+    font-weight: bolder;
+    font-size: 23px;
+    transform: translateX(10px);
+} 
+
+.banner2{
+    padding-top: 10px;
+    flex: 3;
+    background-color: #EBE6E6;
+}
+
+.marcas {
+    padding-bottom: 15px;
+    font-size: 25px;
+    color: rgb(168, 45, 0);
+    font-family: 'Changa', Arial, Helvetica, sans-serif;
+}
+
+.org1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+.org2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#acer{
+    width: 95px;
+    height: 70px;
+    padding-right: 20px;
+}
+
+#apple{
+    width: 95px;
+    height: 95px;
+    padding-right: 20px;
+}
+
+#android {
+    width: 95px;
+    height: 85px;
+    padding-right: 20px;
+}
+
+#asus {
+    width: 110px;
+    height: 25px;
+    padding-right: 20px;
+}
+
+#dell {
+    width: 90px;
+    height: 90px;
+}
+
+#lenovo {
+    width: 155px;
+    height: 25px;
+    padding-right: 35px;
+}
+
+#lg {
+    width: 95px;
+    height: 35px;
+    padding-right: 35px;    
+}
+
+#positivo {
+    width: 165px;
+    padding-right: 35px;
+    height: 55px;
+}
+
+#samsung {
+    width: 155px;
+    height: 30px;
+}
+
+#sony {
+    width: 130px;
+    height: 25px;
+    padding-right: 35px;
+}
+
+#vaio {
+    width: 130px;
+    height: 30px;
+    padding-right: 35px;
+}
+/*Fim Estilização de Banner Marcas*/
+
+/*Inicio Estilização de Banner Horários*/
+.informacoes-horarios {
+    margin-top: 50px;
+    display: flex;
+}
+
+.horarios{
+    flex: 2;
+    font-size: 25px;
+    padding-top: 30px;
+    color: coral;
+    font-family: 'Changa', Arial, Helvetica, sans-serif;
+    background-color: rgb(55, 133, 211);
+}
+
+
+ol {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.horarios-info {
+    display: flex;
+    height: 200px;
+    font-size: 22px;
+}
+
+.horarios-info1, .horarios-info2 {
+    flex: 1;
+    display: flex;
+    padding-top: 10px;
+}
+
+.horarios-info1{
+    justify-content: flex-end;
+}
+
+.horarios-info2{
+    justify-content: flex-start;
+}
+
+.horarios-info1 li, .horarios-info2 li {
+    padding-top: 30px;
+    color: rgba(255, 255, 255, 0.89);
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.horarios-info1 li {
+    padding-right: 160px;
+}
+
+.horarios-info2 li {
+    padding-left: 160px;
+}
+/*Fim Estilização de Banner Horários*/
+
+
+/*Inicio Estilização de Banner Contatos*/
+.contato {
+    flex: 1;
+    padding-top: 30px;
+    font-size: 25px;
+    color: coral;
+    font-family: 'Changa', Arial, Helvetica, sans-serif;
+    background-color: rgb(59, 142, 224);
+}
+
+.contato-info {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
+.contato-info li {
+    font-size: 20px;
+    padding-top: 22px;
+    color: rgba(255, 255, 255, 0.89);
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contato-info img {
+    padding-left: 5px;
+}
+/*Fim Estilização de Banner Contato*/
+
+
+/*Início da Estilização de Endereço*/
+.endereco {
+    flex: 1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-top: 15px;
+    background-color: rgb(233, 130, 71);
+}
+
+.endereco-info{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    padding-bottom: 15px;
+    color: rgba(255, 255, 255, 0.89);
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.endereco h3 {
+    font-size: 25px;
+    font-family: 'Changa', Arial, Helvetica, sans-serif;
+}
+/*Fim da Estilização de Endereço*/
+
+/*Inicio Estilização de Banner Google Maps*/
+.localizacao{
+    flex: 1;
+    height: 500px;
+    margin-bottom: 5px;
+}
+
+iframe {
+    width:100%;
+    height:100%; 
+}
+/*Fim Estilização de Banner Google Maps*/
+
+
+/*Inicio Estilização de Banner Rodapé*/
+.footer_info {
+	font-size: 15px;
+	font-family: 'Changa', Arial, Helvetica, sans-serif;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 25px;
+}
+/*Fim Estilização de Banner Rodapé*/
+
+
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 32px;
+    margin-right: 20px;
+}
+
+.mm_line {
+    height: 3px;
+    background-color: #39aae1;
+}
+
+
+@media (min-width:320px) and (max-width:414px) {
+    .logo{
+        background-size: 225px 48px;
+    }
+
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #menu-direito {
+        display: flex;
+        /*flex: none;*/
+        flex-direction: column;
+    }
+
+    #menu-direito-info {
+       flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0px;
+        width: 100%;
+    }
+
+    .carouselItem img {
+        height: 280px;
+    }
+
+    .carouselPagination li:after{
+        width: 10px;
+        height: 10px;
+    }
+    
+}
